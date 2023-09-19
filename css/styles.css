@@ -195,7 +195,8 @@ img {
   background-color: var(--link-title-color);
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
-      rgba(46, 47, 66, 0.7)),
+      rgba(46, 47, 66, 0.7)
+    ),
     url(../images/hero-bg.jpg);
   background-repeat: no-repeat;
   background-position: center;
@@ -496,6 +497,7 @@ img {
 .footer-soc-list {
   display: flex;
   gap: 16px;
+  margin-right: 80px;
 }
 
 .footer-soc-items {
@@ -534,6 +536,66 @@ img {
 
 .footer-logo-text {
   margin-right: 120px;
+}
+
+.footer-form {
+  display: flex;
+}
+
+.footer-label {
+  display: flex;
+  flex-direction: column;
+}
+
+.label-text {
+  margin-bottom: 16px;
+  color: var(--main-color);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.32px;
+}
+
+.label-cover {
+  display: flex;
+  flex-direction: column;
+}
+
+.subscribe-input {
+  width: 264px;
+  height: 40px;
+  padding-left: 8px;
+  padding-bottom: 8px;
+  padding-top: 8px;
+  border-radius: 4px;
+  background-color: var(--link-title-color);
+  border: 1px solid var(--main-color);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+.subscribe-input::placeholder {
+  color: var(--main-color);
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2;
+  letter-spacing: 0.48px;
+}
+
+.button-subscribe {
+  display: flex;
+  padding: 8px 24px;
+  margin-left: 24px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.64px;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--btn-text-color);
+  color: var(--main-color);
+  text-align: center;
 }
 
 /* .main-portfolio {
