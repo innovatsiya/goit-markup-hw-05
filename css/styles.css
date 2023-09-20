@@ -9,6 +9,7 @@
   --icons-color: #4d5ae5;
   --grey-color: #8e8f99;
   --ocean-color: #31d0aa;
+  --modal-color: #fcfcfc;
 }
 
 body {
@@ -563,7 +564,7 @@ img {
 
 .subscribe-input {
   width: 264px;
-  height: 40px;
+  min-height: 40px;
   padding-left: 8px;
   padding-bottom: 8px;
   padding-top: 8px;
@@ -584,7 +585,11 @@ img {
 }
 
 .button-subscribe {
+  width: 165px;
+  min-height: 40px;
   display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 8px 24px;
   margin-left: 24px;
   font-size: 16px;
@@ -596,6 +601,10 @@ img {
   background-color: var(--btn-text-color);
   color: var(--main-color);
   text-align: center;
+}
+
+.subscribe-icon {
+  margin-left: 16px;
 }
 
 /* .main-portfolio {
@@ -685,4 +694,96 @@ img {
   background-color: var(--btn-text-color);
   transform: translateY(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999999;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(46, 47, 66, 0.4);
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 408px;
+  min-height: 584px;
+  padding: 72px 24px 24px;
+  background: var(--modal-color);
+  border-radius: 4px;
+}
+
+.close-btn-modal {
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  top: 24px;
+  right: 24px;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  background-color: var(--border-btn-cl);
+  border: none;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  fill: var(--link-title-color);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.close-btn-modal:hover,
+.close-btn-modal:focus {
+  background-color: var(--hover-color);
+  fill: var(--main-color);
+}
+
+.modal-text {
+  margin-bottom: 16px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.32px;
+  color: var(--link-title-color);
+}
+.callback-label {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--grey-color);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.7;
+  letter-spacing: 0.48px;
+}
+
+.callback-input {
+  width: 100%;
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid var(--link-title-color, rgba(46, 47, 66, 0.4));
+}
+
+.callback-input:hover,
+.callback-input:focus {
+border: 1px solid var(--btn-text-color);
 }
