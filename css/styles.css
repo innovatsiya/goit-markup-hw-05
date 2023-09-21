@@ -541,6 +541,7 @@ img {
 
 .footer-form {
   display: flex;
+  gap: 24px;
 }
 
 .footer-label {
@@ -565,19 +566,17 @@ img {
 .subscribe-input {
   font-size: 12px;
   font-weight: 400;
-  line-height: 2;
+  line-height: 1.5;
   letter-spacing: 0.48px;
   width: 264px;
-  min-height: 40px;
-  padding-left: 8px;
-  padding-bottom: 8px;
-  padding-top: 8px;
+  height: 40px;
+  padding-left: 16px;
   border-radius: 4px;
   background-color: transparent;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   color: var(--main-color);
   outline: transparent;
   border: 1px solid var(--main-color);
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
 
 .subscribe-input:focus {
@@ -594,13 +593,12 @@ img {
 }
 
 .button-subscribe {
-  width: 165px;
-  min-height: 40px;
+  min-width: 165px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 8px 24px;
-  margin-left: 24px;
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
@@ -730,7 +728,7 @@ img {
 
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
-} 
+}
 
 .backdrop.is-open {
   opacity: 1;
@@ -748,6 +746,9 @@ img {
   padding: 72px 24px 24px;
   background: var(--modal-color);
   border-radius: 4px;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .close-btn-modal {
@@ -767,13 +768,18 @@ img {
   cursor: pointer;
   fill: var(--link-title-color);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .close-btn-modal:hover,
 .close-btn-modal:focus {
   background-color: var(--hover-color);
   fill: var(--main-color);
+  border: none;
+}
+
+.close-modal-icon {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-text {
@@ -785,13 +791,18 @@ img {
   letter-spacing: 0.32px;
   color: var(--link-title-color);
 }
+
+.callback-form-wrap {
+  margin-bottom: 8px; 
+}
+
 .callback-label {
   display: block;
   margin-bottom: 4px;
   color: var(--grey-color);
   font-weight: 400;
   font-size: 12px;
-  line-height: 1.7;
+  line-height: 1.17;
   letter-spacing: 0.48px;
 }
 
@@ -811,7 +822,6 @@ img {
 
 .callback-input-wrap {
   position: relative;
-  margin-bottom: 8px;
 }
 
 .callback-icons {
@@ -833,10 +843,11 @@ img {
   padding: 8px 16px;
   font-size: 12px;
   font-weight: 400;
-  line-height: 1.7;
+  line-height: 1.17;
   letter-spacing: 0.48px;
   color: rgba(46, 47, 66, 0.4);
   background-color: transparent;
+  outline: transparent;
   border-radius: 4px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -858,7 +869,7 @@ img {
 
 .callback-form-submit {
   display: block;
-  width: 169px;
+  min-width: 169px;
   min-height: 56px;
   padding: 16px 32px;
   margin-right: auto;
@@ -874,14 +885,12 @@ img {
   color: var(--main-color);
   background-color: var(--btn-text-color);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .callback-form-submit:hover,
 .callback-form-submit:focus {
   background-color: var(--hover-color);
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
 
 .callback-custom-checkbox {
@@ -906,6 +915,7 @@ img {
   > .callback-custom-checkbox {
   background-color: var(--hover-color);
   fill: var(--btn-color);
+  border: none;
 }
 
 .callback-checkbox-input:focus
@@ -918,7 +928,7 @@ img {
   color: var(--grey-color);
   font-size: 12px;
   font-weight: 400;
-  line-height: 1.7;
+  line-height: 1.17;
   letter-spacing: 0.48px;
 }
 
